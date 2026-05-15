@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState , useEffect} from "react"
 
 function Navbar({inboxData,setChatMessages}){
 
@@ -39,16 +39,27 @@ setChatMessages(
 )
 }
 
+  const handlekeydown = (e) => {
+    if (e.key === 'Enter' || e.code === "Enter"){
+      e.preventDefault();
+      SendMessage()
+    }
+  }
+
+
+
 return(
-<>
-    
+<div className="flex justify-center m-6">
+
  <input type="text" placeholder="Send a message to the Chatbot" className="border"
- value={inputText} size='30'
+ value={inputText} size='30' onKeyDown={handlekeydown}
  onChange={saveText}
+ className='w-[500px] border rounded-lg h-10 text-center p-2 mx-4'
+ 
  />
- <button onClick={SendMessage}>Send</button>
+ <button onClick={SendMessage} className="bg-blue-600 p-2 rounded-lg text-white px-5 hover:cursor-pointer">Send</button>
   
-</  >
+</  div>
 
 )
 }

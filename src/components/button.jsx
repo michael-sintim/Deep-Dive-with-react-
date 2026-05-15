@@ -1,17 +1,25 @@
 import React from "react";
 import { useState } from "react";
 
-function Button(props){
+function Button({x,y}){
 
-  
+  const [count,setCount] = useState(0)
+  function Counter(){
+    setCount(count+1)
+    console.log('clicked')
+  }
+    
+  function Reset(){
+        setCount(0)
+
+  };
+
   return (
     <>
-      <button onClick={Counter} className="border bg-amber-400 ">
-        Clicked {count} times
+      <button onClick={x} className="border bg-amber-400 ">
+        Clicked {y} times
       </button>
-       <button onClick={Reset} className="border bg-amber-400 ">
-       Reset
-      </button>
+      
     </>
   );
 }
