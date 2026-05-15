@@ -36,7 +36,7 @@ const [count,setCount] = useState(0)
   <BrowserRouter> 
   <Routes>
     <Route path='/' element={
-      <div className='flex flex-col h-screen max-w-3xl mx-auto shadow-3xl'>
+      <div className='flex flex-col h-screen p-4 max-w-3xl mx-auto shadow-3xl'>
       <Navbar 
       inboxData={chatMessages}
       setChatMessages={setChatMessages}

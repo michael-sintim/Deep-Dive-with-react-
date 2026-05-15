@@ -5,11 +5,14 @@ import ChatMessage from "./ChatMessage";
 function ChatMessages({ inboxData, setChatMessages }) {
   const ChatMessageComponents = inboxData.map((chatMessage) => {
     return (
+
+      <div className="space-y-3">
       <ChatMessage 
         message={chatMessage.message}
         sender={chatMessage.sender}
         key={chatMessage.id}
       />
+      </div>
     );
   })
 

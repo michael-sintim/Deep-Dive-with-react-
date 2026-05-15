@@ -8,12 +8,16 @@ function ChatMessage({message,sender}){
     <div className="flex justify-start items-center">
   {/* hello Chatbot */}
   <img src="robot.jpg" alt="user image"  width='50' className="rounded-3xl mx-3"/>  
-  {message}
-    </div> : <div className="flex justify-end items-center ">
-  {/* user  */}
+  <div className="bg-gray-200 text-black max-w-[50%] rounded-lg p-3">
+{message}
+  </div>
   
-  {message}
-  <img src="user.jpg" alt="user image"  width='50'className="mx-3 " />  
+    </div> : <div className="flex justify-end items-center mr-12 ">
+  {/* user  */}
+  <div className="bg-gray-200 text-black max-w-[50%] rounded-lg p-3">
+{message}
+  </div>
+  <img src="user.jpg" alt="user image"  width='50'className="" />  
     </div>
 
 }
