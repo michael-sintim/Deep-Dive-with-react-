@@ -47,7 +47,7 @@ setChatMessages(
         ],
         
 )
-    },500
+    },300
 )
 }
 
