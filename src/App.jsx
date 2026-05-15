@@ -30,6 +30,7 @@ const [count,setCount] = useState(0)
        console.log('reset')
  };
 
+ const [isThinking,setIsThinking] = useState(false)
  
   return (
 
@@ -40,11 +41,13 @@ const [count,setCount] = useState(0)
       <Navbar 
       inboxData={chatMessages}
       setChatMessages={setChatMessages}
+      setIsThinking={setIsThinking}
       /> 
-      <div className='grow  overflow-y-auto p-4 bg-gray-50'>
+      <div className='grow pt-20 pb-24'>
        <ChatMessages className='max-w-md p-3 rounded-lg'
       inboxData={chatMessages}
       setChatMessages={setChatMessages}
+      
        />
       </div>
      
