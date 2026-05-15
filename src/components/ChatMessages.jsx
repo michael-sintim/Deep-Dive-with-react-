@@ -5,7 +5,7 @@ import ChatMessage from "./ChatMessage";
 function ChatMessages({ inboxData, setChatMessages }) {
   const ChatMessageComponents = inboxData.map((chatMessage) => {
     return (
-      <ChatMessage
+      <ChatMessage 
         message={chatMessage.message}
         sender={chatMessage.sender}
         key={chatMessage.id}

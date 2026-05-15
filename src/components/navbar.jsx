@@ -52,7 +52,7 @@ return(
     <>
 <div className="flex justify-center m-5">
 
- <input type="text" placeholder="Send a message to the Chatbot" className="border"
+ <input type="text" placeholder="Send a message to the Chatbot"
  value={inputText} size='30' onKeyDown={handlekeydown}
  onChange={saveText}
  className='w-[500px] border rounded-lg h-10 text-left p-5 mx-4'

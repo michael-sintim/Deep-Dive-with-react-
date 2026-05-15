@@ -6,24 +6,7 @@ import { useState ,useEffect} from 'react';
 import Button from './components/button';
 function App() {
 
-  const [chatMessages,setChatMessages] = useState([{ // shortcut  const  [ChatMessages,setChatMessages]= mainMessages
-    
-    message:"hello chatbot" ,
-    sender:'user',
-    id:"id1"
-  },{
-    message:"hello how can i help you " ,
-    sender:'robot',
-    id:"id2"
-  },{
-    message:"Can you get me today's date" ,
-    sender:'user',
-    id:"id3"
-  },{
-    message:"Today is september 27th" ,
-    sender:'robot',
-    id:"id4"
-  },
+  const [chatMessages,setChatMessages] = useState([
 ])
 
 const [count,setCount] = useState(0)
@@ -53,15 +36,18 @@ const [count,setCount] = useState(0)
   <BrowserRouter> 
   <Routes>
     <Route path='/' element={
-      <>
+      <div className='flex flex-col h-screen max-w-3xl mx-auto shadow-3xl'>
       <Navbar 
       inboxData={chatMessages}
       setChatMessages={setChatMessages}
       /> 
-      <ChatMessages
+      <div className='grow  overflow-y-auto p-4 bg-gray-50'>
+       <ChatMessages className='max-w-md p-3 rounded-lg'
       inboxData={chatMessages}
       setChatMessages={setChatMessages}
        />
+      </div>
+     
 {/*        
       <Button x={Counter} y={count} /> 
       <Button x={Counter} y={count}/> 
@@ -82,7 +68,7 @@ const [count,setCount] = useState(0)
       <ChatMessage  message="hello how can i help you " sender='robot'/>
       <ChatMessage  message="Can you get me today's date " sender='user'/>
       <ChatMessage  message="Today is september 27th" sender='robot'/> */}
-      </>}    
+      </div>}    
       />
 
   </Routes>

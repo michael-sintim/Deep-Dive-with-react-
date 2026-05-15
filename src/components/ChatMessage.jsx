@@ -5,15 +5,15 @@ function ChatMessage({message,sender}){
 
 
     return   sender === "robot" ? 
-    <div>
+    <div className="flex justify-start items-center">
   {/* hello Chatbot */}
-  <img src="robot.jpg" alt="user image"  width='50' />  
+  <img src="robot.jpg" alt="user image"  width='50' className="rounded-3xl mx-3"/>  
   {message}
-    </div> : <div>
+    </div> : <div className="flex justify-end items-center ">
   {/* user  */}
   
-  <img src="user.jpg" alt="user image"  width='50' />  
   {message}
+  <img src="user.jpg" alt="user image"  width='50'className="mx-3 " />  
     </div>
 
 }
