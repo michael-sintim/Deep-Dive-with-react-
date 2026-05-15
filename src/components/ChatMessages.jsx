@@ -11,32 +11,15 @@ function ChatMessages({ inboxData, setChatMessages }) {
         key={chatMessage.id}
       />
     );
-  });
-
-  function SendMessage() {
-    // console.log("send message")
-    // ChatMessages.push({
-    //     message: 'test',
-    //     sender: 'user',
-    //     id : crypto.randomUUID()
-    // });
-    setChatMessages([
-      ...inboxData,
-      // {
-      //   message: "txt",
-      //   sender: "poo",
-      //   id: crypto.randomUUID(),
-      // },
-    ]);
- 
-    
-  }
+  })
 
   return (
+  
     <>
-      <button onClick={SendMessage} className="border bg-amber-400 ">
-        Send Message
-      </button>
+{/* 
+      <button onClick={Counter} className="border bg-amber-400 ">
+        Clicked {count} times
+      </button> */}
       {ChatMessageComponents}
     </>
   );

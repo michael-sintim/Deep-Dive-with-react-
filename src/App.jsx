@@ -4,10 +4,16 @@ import './index.css'
 import ChatMessage from './components/ChatMessage'
 import ChatMessages from './components/ChatMessages';
 import { useState } from 'react';
+import Button from './components/button';
 function App() {
 
+  const [count,setCount] = useState(0)
+  function Counter(){
+    setCount(count+1)
+    console.log('clicked')
+  };
   const [chatMessages,setChatMessages] = useState([{ // shortcut  const  [ChatMessages,setChatMessages]= mainMessages
-
+    
     message:"hello chatbot" ,
     sender:'user',
     id:"id1"
@@ -40,6 +46,8 @@ function App() {
       inboxData={chatMessages}
       setChatMessages={setChatMessages}
        />
+      <Button/> 
+      <Button/> 
 
       {/* <ChatMessage  message="hello chatbot" sender='user'/>
       <ChatMessage  message="hello how can i help you " sender='robot'/>
@@ -55,5 +63,3 @@ function App() {
 }
 
 export default App
-
-"https://unpkg.com/supersimpledev/chatbot.js"
