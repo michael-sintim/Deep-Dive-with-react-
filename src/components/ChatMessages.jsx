@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ChatMessage from "./ChatMessage";
 
-function ChatMessages({ inboxData, x }) {
+function ChatMessages({ inboxData, setChatMessages }) {
   const ChatMessageComponents = inboxData.map((chatMessage) => {
     return (
 
