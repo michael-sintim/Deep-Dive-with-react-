@@ -27,7 +27,6 @@ function SendMessage (){
 )
 
 SetinputText('')
-
 setIsThinking(true)
 
 
