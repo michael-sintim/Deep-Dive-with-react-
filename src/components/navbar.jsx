@@ -30,9 +30,7 @@ SetinputText('')
 setIsThinking(true)
 
 
-setTimeout(
-
-    () => {
+setTimeout(() => {
 const response = window.Chatbot.getResponse(inputText)
 setIsThinking(false)
 
